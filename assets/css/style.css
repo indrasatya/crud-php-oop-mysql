@@ -1,0 +1,51 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 40px;
+}
+
+.navbar-default {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.navbar-default .navbar-brand {
+    color: #f1f2f7;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+.container-fluid .text-muted {
+  margin: 15px 0;
+}
+
+.footer {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+}
+
+.btn-tambah {
+	margin-top: -7px;
+}
+
+.center {
+	text-align: center;
+}
+
+.pagination {
+	margin-top: -20px;
+}
+
+.btn-submit {
+	width: 80px;
+}
+
+.btn-reset {
+	width: 80px;
+	margin-left: 10px;
+}
