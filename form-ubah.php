@@ -14,21 +14,23 @@
       <div class="page-header">
         <h4>
           <i class="glyphicon glyphicon-edit"></i> 
-          Input data siswa
+          Ubah data siswa
         </h4>
       </div> <!-- /.page-header -->
       <?php
-      // memanggil class siswa
-      require_once "function/siswa.php";
-      // instance objek siswa
-      $siswa = new siswa();
+      if (isset($_GET['id'])) {
+        // memanggil class siswa
+        require_once "function/siswa.php";
+        // instance objek siswa
+        $siswa = new siswa();
 
-      $nis  = $_GET['id'];
-      $data = $siswa->get_siswa($nis);
+        $nis  = $_GET['id'];
+        $data = $siswa->get_siswa($nis);
 
-      $tanggal        = $data['tanggal_lahir'];
-      $tgl            = explode('-',$tanggal);
-      $tanggal_lahir  = $tgl[2]."-".$tgl[1]."-".$tgl[0];
+        $tanggal        = $data['tanggal_lahir'];
+        $tgl            = explode('-',$tanggal);
+        $tanggal_lahir  = $tgl[2]."-".$tgl[1]."-".$tgl[0];
+      }
       ?>
       <div class="panel panel-default">
         <div class="panel-body">
